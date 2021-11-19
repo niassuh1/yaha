@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 import 'package:yaha/constants.dart';
 import 'package:yaha/screens/home.dart';
+import 'package:yaha/screens/login.dart';
 
 void main() {
   runApp(MyApp());
