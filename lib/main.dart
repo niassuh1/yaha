@@ -14,10 +14,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        fontFamily: 'Poppins',
-        primaryColor: primaryColor,
-        accentColor: accentColor,
-      ),
+          fontFamily: 'Poppins',
+          primaryColor: primaryColor,
+          accentColor: accentColor,
+          scaffoldBackgroundColor: Colors.white),
       home: Home(),
     );
   }
