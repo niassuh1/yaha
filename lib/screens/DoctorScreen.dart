@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 // import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:url_launcher/url_launcher.dart';
+
 import 'package:yaha/entities/doctor.dart';
 import 'package:yaha/screens/Home.dart';
-import 'package:url_launcher/url_launcher.dart' as UrlLauncher;
+import 'package:yaha/screens/doctor_screen_header.dart';
 
 import '../constants.dart';
 
@@ -13,45 +13,31 @@ class DoctorScreen extends StatelessWidget {
   final Doctor doctor;
   @override
   Widget build(BuildContext context) {
+    ThemeData theme = Theme.of(context);
     return Scaffold(
-      body: Column(
-        children: [
-          Expanded(
-              child: Icon(
-            FontAwesomeIcons.userNurse,
-            size: 40,
-            color: Colors.white,
-          )),
-          Expanded(
-              child: Text(
-            'Dr. ${doctor.firstName} ${doctor.lastName} \n Specialist in ${doctor.specialization}',
-            textAlign: TextAlign.center,
-            overflow: TextOverflow.ellipsis,
-            style: const TextStyle(
-                fontWeight: FontWeight.bold, color: Colors.white),
-          )),
-
-          // Expanded(
-          //     child: Icon(
-          //   FontAwesomeIcons.phone,
-          //   size: 20,
-          //   color: Colors.grey[200],
-          // )),
-          IconButton(
-            icon: const Icon(Icons.phone),
-            color: Colors.white,
-            onPressed: () async {
-              // await FlutterPhoneDirectCaller.callNumber(
-              // '+${doctor.phoneNumber}');
-              launch('tel:+${doctor.phoneNumber}');
-            },
-            // disabledColor: Colors.grey[200],
+      body: CustomScrollView(
+        slivers: [
+          SliverPersistentHeader(
+            delegate: DoctorScreenHeader(
+                minExtent: 10,
+                doctor: doctor,
+                maxExtent: MediaQuery.of(context).size.height / 2.5),
           ),
-          Spacer(),
-          BottomPart()
+          SliverToBoxAdapter(
+            child: SizedBox(
+              height: 900,
+            ),
+          ),
         ],
       ),
-      backgroundColor: Theme.of(context).primaryColor,
+      bottomNavigationBar: Material(
+        color: Colors.transparent,
+        child: Container(
+          margin: EdgeInsets.all(10),
+          height: 60,
+          color: theme.primaryColor,
+        ),
+      ),
     );
   }
 }
