@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:yaha/constants.dart';
+import 'package:yaha/entities/doctor.dart';
+import 'package:yaha/screens/DoctorScreen.dart';
 import 'package:yaha/screens/home.dart';
 
 void main() {
@@ -12,13 +14,20 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        fontFamily: 'Poppins',
-        primaryColor: primaryColor,
-        accentColor: accentColor,
-      ),
-      home: Home(),
-    );
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          fontFamily: 'Poppins',
+          primaryColor: primaryColor,
+          accentColor: accentColor,
+        ),
+        home: DoctorScreen(
+          doctor: Doctor(
+            firstName: "Sayed",
+            lastName: "Alfy",
+            specialization: "Heart Disease",
+            rating: 3.9,
+            phoneNumber: 966138877661,
+          ),
+        ));
   }
 }
