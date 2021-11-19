@@ -10,6 +10,7 @@ class DoctorScreenHeader extends SliverPersistentHeaderDelegate {
   final double minExtent;
   final double maxExtent;
   final Doctor doctor;
+
   @override
   Widget build(
       BuildContext context, double shrinkOffset, bool overlapsContent) {
@@ -70,7 +71,15 @@ class DoctorScreenHeader extends SliverPersistentHeaderDelegate {
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.only(
-                  topLeft: defaultRadius, topRight: defaultRadius),
+                topLeft: defaultRadius,
+                topRight: defaultRadius,
+              ),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(.2),
+                  blurRadius: 20,
+                ),
+              ],
             ),
           ),
         ),

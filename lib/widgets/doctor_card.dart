@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 import 'package:yaha/entities/doctor.dart';
-import 'package:yaha/screens/DoctorScreen.dart';
+import 'package:yaha/screens/doctor_screen.dart';
+import 'package:yaha/widgets/star_badge.dart';
 
 class DoctorCard extends StatelessWidget {
   const DoctorCard({required this.doctor});
@@ -11,11 +13,9 @@ class DoctorCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => DoctorScreen(doctor: doctor),
-            ));
+        Navigator.of(context).push((MaterialPageRoute(
+          builder: (context) => DoctorScreen(doctor: doctor),
+        )));
       },
       child: Container(
         height: 225,
@@ -56,32 +56,7 @@ class DoctorCard extends StatelessWidget {
               style: TextStyle(color: Colors.black26),
             ),
             Spacer(),
-            Container(
-              width: 100,
-              padding: EdgeInsets.all(4),
-              decoration: BoxDecoration(
-                  color: Colors.amber[50],
-                  borderRadius: BorderRadius.circular(20)),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(
-                    Icons.star,
-                    color: Colors.amber[600],
-                  ),
-                  SizedBox(
-                    width: 5,
-                  ),
-                  Text(
-                    doctor.rating.toString(),
-                    style: TextStyle(
-                      fontWeight: FontWeight.w500,
-                      fontSize: 13,
-                    ),
-                  ),
-                ],
-              ),
-            ),
+            SizedBox(width: 100, child: StarBadge(rating: doctor.rating)),
           ],
         ),
       ),

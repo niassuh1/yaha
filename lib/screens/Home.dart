@@ -78,28 +78,14 @@ class Home extends StatelessWidget {
                     children: [
                       DoctorCard(
                         doctor: Doctor(
-                            firstName: 'Hussain',
-                            lastName: 'Al Zayer',
-                            rating: 4.5,
-                            specialization: 'Dermatologist',
-                            phoneNumber: 0.0),
-                      ),
-                      DoctorCard(
-                        doctor: Doctor(
-                          firstName: 'Ahmad',
-                          lastName: 'Mohammad',
-                          rating: 4.5,
-                          specialization: 'Oncologist',
-                          phoneNumber: 0.0,
-                        ),
-                      ),
-                      DoctorCard(
-                        doctor: Doctor(
                           firstName: 'Hussain',
                           lastName: 'Al Zayer',
-                          rating: 4.5,
+                          rating: 4.8,
                           specialization: 'Dermatologist',
                           phoneNumber: 0.0,
+                          location: Location(
+                              locationName: 'John Hopkins',
+                              locationDetails: '8131 Medical Access Rd'),
                         ),
                       ),
                       DoctorCard(
@@ -109,6 +95,33 @@ class Home extends StatelessWidget {
                           rating: 4.5,
                           specialization: 'Oncologist',
                           phoneNumber: 0.0,
+                          location: Location(
+                              locationName: 'John Hopkins',
+                              locationDetails: '8131 Medical Access Rd'),
+                        ),
+                      ),
+                      DoctorCard(
+                        doctor: Doctor(
+                          firstName: 'Ali',
+                          lastName: 'Hasan',
+                          rating: 4.9,
+                          specialization: 'Neurologist',
+                          phoneNumber: 0.0,
+                          location: Location(
+                              locationName: 'John Hopkins',
+                              locationDetails: '8131 Medical Access Rd'),
+                        ),
+                      ),
+                      DoctorCard(
+                        doctor: Doctor(
+                          firstName: 'Hasan',
+                          lastName: 'J.',
+                          rating: 4.5,
+                          specialization: 'Radiologist',
+                          phoneNumber: 0.0,
+                          location: Location(
+                              locationName: 'John Hopkins',
+                              locationDetails: '8131 Medical Access Rd'),
                         ),
                       ),
                     ],
