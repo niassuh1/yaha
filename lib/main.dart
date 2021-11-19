@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:yaha/constants.dart';
 import 'package:yaha/screens/home.dart';
+import 'package:yaha/screens/login.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         primaryColor: primaryColor,
         accentColor: accentColor,
       ),
-      home: Home(),
+      home: Login(),
     );
   }
 }
