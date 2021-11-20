@@ -152,8 +152,9 @@ class Home extends StatelessWidget {
       shadowColor: Colors.black38,
       elevation: 6,
       textTheme: TextTheme(
-          title: TextStyle(
-              color: Colors.black, fontSize: 18, fontFamily: 'Poppins')),
+          // title: TextStyle(
+          //     color: Colors.black, fontSize: 18, fontFamily: 'Poppins')
+          ),
       title: buildTitle(),
       actions: [buildProfile()],
     );

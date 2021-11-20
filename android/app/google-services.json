@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "791554846933",
+    "project_id": "yaha-9a8a9",
+    "storage_bucket": "yaha-9a8a9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:791554846933:android:86dc11bac13fa9931e325c",
+        "android_client_info": {
+          "package_name": "com.gdsckfupm.yaha"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "791554846933-t756hmoc1c0u16cvgikj0bkdv4m6jki0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwdeLruLCI9S0TmwRN1--tzFYB5oA3E7g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "791554846933-t756hmoc1c0u16cvgikj0bkdv4m6jki0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
