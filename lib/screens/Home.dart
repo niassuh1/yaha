@@ -3,9 +3,11 @@ import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:yaha/constants.dart';
 import 'package:yaha/entities/doctor.dart';
+import 'package:yaha/entities/prescription.dart';
 import 'package:yaha/entities/symptoms.dart';
 import 'package:yaha/widgets/card_box.dart';
 import 'package:yaha/widgets/doctor_card.dart';
+import 'package:yaha/widgets/perscreption_card.dart';
 import 'package:yaha/widgets/symptoms_list.dart';
 
 class Home extends StatelessWidget {
@@ -57,6 +59,10 @@ class Home extends StatelessWidget {
                   ],
                 ),
               ),
+              sectionTitle('From Your Doctors'),
+              SizedBox(
+                  height: 280,
+                  child: PerscreptionCard(prescriptions: prescription)),
               sectionTitle('What Are Your Symptoms'),
               SymptomsList(
                 symptoms: symptoms,
