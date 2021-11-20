@@ -192,10 +192,16 @@ class Home extends StatelessWidget {
         ),
         Text(
           'Greetings,',
-          style:
-              TextStyle(fontSize: 12, height: 0, fontWeight: FontWeight.w600),
+          style: TextStyle(
+              fontSize: 12,
+              height: 0,
+              fontWeight: FontWeight.w700,
+              color: Colors.black),
         ),
-        Text('Hussain'),
+        Text(
+          'Hussain',
+          style: TextStyle(color: Colors.black, fontWeight: FontWeight.w400),
+        ),
       ],
     );
   }

@@ -4,7 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'package:yaha/entities/doctor.dart';
 import 'package:yaha/entities/review.dart';
-import 'package:yaha/screens/Home.dart';
+import 'package:yaha/screens/home.dart';
 import 'package:yaha/screens/doctor_screen_header.dart';
 import 'package:yaha/widgets/review_card.dart';
 
