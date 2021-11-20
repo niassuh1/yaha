@@ -80,7 +80,7 @@ class _LoginState extends State<Login> {
   }
 
   String? countrycode = "+966";
-
+  String number = "";
   Column signin(BuildContext context) {
     return Column(children: [
       // container -> dropdownlist + textfield
@@ -102,8 +102,6 @@ class _LoginState extends State<Login> {
                     setState(() {
                       countrycode = value.dialCode;
                     });
-
-                    print("$countrycode hi");
                   },
                   initialSelection: '+966',
                   favorite: ['+966', 'sa'],
@@ -111,6 +109,11 @@ class _LoginState extends State<Login> {
               ),
               Expanded(
                 child: TextField(
+                  onChanged: (value) {
+                    setState(() {
+                      number = value;
+                    });
+                  },
                   keyboardType: TextInputType.phone,
                   decoration: InputDecoration(
                       hintText: "$countrycode", border: InputBorder.none),
@@ -134,7 +137,7 @@ class _LoginState extends State<Login> {
         child: Material(
           color: Colors.transparent,
           child: InkWell(
-            onTap: widget.signInTab,
+            onTap: number == "+966595312337" ? widget.signInTab : () {},
             child: Ink(
               height: 50,
               width: double.infinity,
