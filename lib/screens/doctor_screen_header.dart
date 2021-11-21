@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/rendering/sliver_persistent_header.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:yaha/entities/doctor.dart';
 
 class DoctorScreenHeader extends SliverPersistentHeaderDelegate {
@@ -56,8 +57,16 @@ class DoctorScreenHeader extends SliverPersistentHeaderDelegate {
                     fontWeight: FontWeight.w500,
                   ),
                 ),
+                SizedBox(
+                  height: 10,
+                ),
                 Row(
-                  children: [],
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    circleButton(icon: FontAwesomeIcons.solidCommentAlt),
+                    SizedBox(width: 12),
+                    circleButton(icon: FontAwesomeIcons.video),
+                  ],
                 ),
               ],
             ),
@@ -84,6 +93,31 @@ class DoctorScreenHeader extends SliverPersistentHeaderDelegate {
           ),
         ),
       ],
+    );
+  }
+
+  Container circleButton({required IconData icon}) {
+    return Container(
+      width: 50,
+      height: 50,
+      clipBehavior: Clip.antiAlias,
+      decoration: BoxDecoration(
+        color: Colors.white.withOpacity(.3),
+        borderRadius: BorderRadius.circular(25),
+      ),
+      child: Material(
+        color: Colors.transparent,
+        child: InkWell(
+          splashColor: Colors.blueAccent.withOpacity(.4),
+          highlightColor: Colors.blueAccent.withOpacity(.6),
+          onTap: () {},
+          child: Icon(
+            icon,
+            color: Colors.white,
+            size: 18,
+          ),
+        ),
+      ),
     );
   }
 

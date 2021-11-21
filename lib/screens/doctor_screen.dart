@@ -24,7 +24,7 @@ class DoctorScreen extends StatelessWidget {
             delegate: DoctorScreenHeader(
                 minExtent: 10,
                 doctor: doctor,
-                maxExtent: MediaQuery.of(context).size.height / 2.5),
+                maxExtent: MediaQuery.of(context).size.height / 2.45),
           ),
           SliverToBoxAdapter(
               child: Padding(

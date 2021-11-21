@@ -1,16 +1,17 @@
-# yaha
+# YAHA
 
-A new Flutter project.
+A health appointment app.
 
-## Getting Started
+## Demo
 
-This project is a starting point for a Flutter application.
+![Demo](/demo-01.png)
 
-A few resources to get you started if this is your first Flutter project:
+### Vision And Idea
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+- To have a social aspect in interacting with doctors.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Pharmacy feature allowing users to track their own health, which keeps medical practitioners in touch with their patients.
+
+- An achievments feature, displayed in the doctor's page to develop trust between the medical practitioner and the patient.
+
+- A Yaha(For doctors and pharmacist) app allowing doctors, pharmacists, and patients to communicate effectively.
