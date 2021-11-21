@@ -10,7 +10,7 @@ A health appointment app.
 
 - To have a social aspect in interacting with doctors.
 
-- Pharmacy feature allowing users to track their own health, which keeps medical practitioners in touch with their patients.
+- Pharmacy feature allowing users to follow the doctor's instructions, which keeps medical practitioners aware and in touch with their patients.
 
 - An achievments feature, displayed in the doctor's page to develop trust between the medical practitioner and the patient.
 
