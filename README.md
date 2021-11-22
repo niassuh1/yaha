@@ -1,6 +1,12 @@
 # YAHA
 
-A health appointment app.
+A consulting health app that is aiming to connect consultant doctors with their patients to prescribe medical prescriptions for patients, track their dose intake, and also give pateints general health recommendations during medical duration.
+
+## Authors
+
+- Hussain Alzayer (niassuh1) 
+- Kumail Alawa (Kumail00Alawa) <a href="https://www.linkedin.com/in/kumail-alawa/">LinkedIn</a>
+- Sultan Abbas (SultanAbbas0)
 
 ## Demo
 
